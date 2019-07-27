@@ -7,9 +7,6 @@
         <groupId>com.taotao.parent</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>taotao-manager</artifactId>
     <packaging>pom</packaging>
     <modules>
         <module>taotao-manager-pojo</module>
@@ -17,6 +14,10 @@
         <module>taotao-manager-service</module>
         <module>taotao-manager-web</module>
     </modules>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>taotao-manager</artifactId>
 
 
 </project>
+

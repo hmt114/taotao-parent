@@ -13,12 +13,6 @@
         <module>taotao-common</module>
     </modules>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!-- 指定源代码和编译代码的java版本 -->
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-    </properties>
     <!-- 集中定义依赖版本号 -->
     <properties>
 
