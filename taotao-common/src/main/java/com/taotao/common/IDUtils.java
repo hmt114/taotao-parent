@@ -1,8 +1,13 @@
 package com.taotao.common;
 
 import java.util.Random;
+import java.util.UUID;
 
 public class IDUtils {
+
+	public static String genImageNameByUUID() {
+		return UUID.randomUUID().toString().replaceAll("-", "");
+	}
 
 	/**
 	 * 图片名生成
@@ -37,7 +42,10 @@ public class IDUtils {
 	}
 	
 	public static void main(String[] args) {
-		for(int i=0;i< 100;i++)
-		System.out.println(genItemId());
+		for(int i=0;i< 100;i++){
+			System.out.println(genItemId());
+		}
 	}
+
+
 }

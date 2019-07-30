@@ -20,4 +20,10 @@ public class PageController {
     public String toPage(@PathVariable String page){
         return page;
     }
+
+    @RequestMapping("/item-param-add")
+    public String toAdd(){
+        return "item-param-add";
+    }
+
 }

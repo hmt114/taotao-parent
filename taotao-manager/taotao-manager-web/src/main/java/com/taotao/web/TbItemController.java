@@ -1,6 +1,8 @@
 package com.taotao.web;
 
 import com.taotao.common.EasyUIResult;
+import com.taotao.common.TaotaoResult;
+import com.taotao.pojo.TbItem;
 import com.taotao.service.TbItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,8 +23,17 @@ public class TbItemController {
 
     @RequestMapping("/list")
     @ResponseBody
-    public EasyUIResult getTbItemList(@RequestParam int page,@RequestParam int rows) {
+    public EasyUIResult getTbItemList(@RequestParam int page, @RequestParam int rows) {
         EasyUIResult result = tbItemService.getTbItemList(page, rows);
         return result;
     }
+
+    @RequestMapping("/save")
+    @ResponseBody
+    public TaotaoResult saveItem(TbItem tbItem, String desc,String itemParams){
+        TaotaoResult taotaoResult = tbItemService.addTbItem(tbItem,desc,itemParams);
+        return taotaoResult;
+    }
+
+
 }

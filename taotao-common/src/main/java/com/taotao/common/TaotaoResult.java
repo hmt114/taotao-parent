@@ -1,14 +1,22 @@
 package com.taotao.common;
 
-import java.util.List;
-
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.util.List;
 
 /**
  * 淘淘商城自定义响应结构
  */
 public class TaotaoResult {
+    @Override
+    public String toString() {
+        return "TaotaoResult{" +
+                "status=" + status +
+                ", msg='" + msg + '\'' +
+                ", data=" + data +
+                '}';
+    }
 
     // 定义jackson对象
     private static final ObjectMapper MAPPER = new ObjectMapper();
@@ -86,7 +94,7 @@ public class TaotaoResult {
      * 将json结果集转化为TaotaoResult对象
      *
      * @param jsonData json数据
-     * @param clazz TaotaoResult中的object类型
+     * @param clazz    TaotaoResult中的object类型
      * @return
      */
     public static TaotaoResult formatToPojo(String jsonData, Class<?> clazz) {
@@ -129,7 +137,7 @@ public class TaotaoResult {
      * Object是集合转化
      *
      * @param jsonData json数据
-     * @param clazz 集合中的类型
+     * @param clazz    集合中的类型
      * @return
      */
     public static TaotaoResult formatToList(String jsonData, Class<?> clazz) {
