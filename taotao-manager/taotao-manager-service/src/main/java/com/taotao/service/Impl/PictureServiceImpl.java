@@ -51,9 +51,9 @@ public class PictureServiceImpl implements PictureService {
         StringBuilder fileUrl = new StringBuilder();
         fileUrl.append(imageDomain);
         fileUrl.append("/");
-        fileUrl.append(fileName);
-        fileUrl.append("/");
         fileUrl.append(filePath);
+        fileUrl.append("/");
+        fileUrl.append(fileName);
 
         // 返回图片访问地址
         try {
