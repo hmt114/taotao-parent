@@ -33,6 +33,7 @@ public class TbItemParamController {
     @RequestMapping("/query/itemcatid/{id}")
     @ResponseBody
     public TaotaoResult getTbItemParamByCatId(@PathVariable long id){
+        System.out.println(id);
         TaotaoResult taotaoResult = tbItemParamService.getItemParamByItemCatId(id);
         return taotaoResult;
     }

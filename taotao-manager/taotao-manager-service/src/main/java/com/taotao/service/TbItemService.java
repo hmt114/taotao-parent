@@ -3,8 +3,6 @@ package com.taotao.service;
 import com.taotao.common.EasyUIResult;
 import com.taotao.common.TaotaoResult;
 import com.taotao.pojo.TbItem;
-import com.taotao.pojo.TbItemDesc;
-import com.taotao.pojo.TbItemParam;
 import org.springframework.stereotype.Service;
 
 /**
@@ -24,6 +22,10 @@ public interface TbItemService {
 
     TaotaoResult reshelfTbItem(long ids);
 
+    TaotaoResult showDesc(long ids);
 
+    TaotaoResult showParamItem(long ids);
+
+    TaotaoResult updateTbItem(TbItem tbItem, String desc, String itemParams);
 
 }
