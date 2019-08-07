@@ -26,4 +26,9 @@ public class PageController {
         return "item-param-add";
     }
 
+    @RequestMapping("/content-add")
+    public String toContentAdd(){
+        return "content-add";
+    }
+
 }
