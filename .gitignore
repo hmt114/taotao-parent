@@ -24,3 +24,6 @@ target/
 logs/
 log/
 *.log
+.gitignore
+pom.xml
+src/

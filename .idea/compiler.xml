@@ -13,6 +13,7 @@
         <module name="taotao-portal" />
         <module name="taotao-rest" />
         <module name="taotao-search" />
+        <module name="taotao-sso" />
         <module name="taotao-manager-service" />
       </profile>
     </annotationProcessing>
