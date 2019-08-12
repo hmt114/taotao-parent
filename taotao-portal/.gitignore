@@ -1,0 +1,28 @@
+# Created by .ignore support plugin (hsz.mobi)
+### my_git_ignore template
+# idea
+.idea/
+*.iml
+out/
+
+# eclipse
+.preject
+.classpath
+.settings/
+bin/
+build/
+WebContent/WEB-INF/classes
+
+# maven
+target/
+.mvn/
+
+# java
+*.classes
+
+# logs相关
+logs/
+log/
+*.log
+
+

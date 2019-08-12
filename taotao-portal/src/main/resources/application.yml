@@ -1,0 +1,17 @@
+server:
+  port: 8082
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+rest:
+  url: http://localhost:8081/rest
+search:
+  url: http://localhost:8083/search
+order:
+  url: http://localhost:8085/order
+taotao:
+  sso:
+    login_url: http://localhost:8084/page/showLogin
+    token_url: http://localhost:8084/user/token

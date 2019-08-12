@@ -1,0 +1,26 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    password: root
+    username: root
+    url: jdbc:mysql://localhost:3306/taotao?characterEncoding=utf8&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+  mvc:
+    servlet:
+      path: /rest
+  redis:
+    host: www.taotao.com
+    jedis:
+      pool:
+        max-idle: 2
+        max-wait: 1000ms
+
+mybatis:
+  mapper-locations: classpath:/mappers/*
+  type-aliases-package: com.taotao.pojo
+
+logging:
+  level:
+    root: info
+    com.taotao.mapper: debug
