@@ -48,6 +48,30 @@ public class CartServiceImpl implements CartService {
         return cartItemList;
     }
 
+    @Override
+    public TaotaoResult updateNum(Long itemId, Long num, HttpServletRequest request, HttpServletResponse response) {
+        List<CartItem> cartItemList = new ArrayList<>();
+
+        return null;
+    }
+
+    @Override
+    public List<CartItem> deleteid(Long itemId, HttpServletRequest request, HttpServletResponse response) {
+        String json=CookieUtils.getCookieValue(request,"TT_CART",true);
+        List<CartItem> cartItemList=new ArrayList<>();
+        if(!StringUtils.isBlank(json)){
+            cartItemList= JsonUtils.jsonToList(json,CartItem.class);
+            for(CartItem cartItem:cartItemList){
+                if(cartItem.getId().equals(itemId)){
+                    cartItemList.remove(cartItem);
+                    break;
+                }
+            }
+        }
+        CookieUtils.setCookie(request,response,"TT_CART", JsonUtils.objectToJson(cartItemList),true);
+        return cartItemList;
+    }
+
     private void LoadItemListFromCart(List<CartItem> cartItemList,HttpServletRequest request){
         try {
             String json = CookieUtils.getCookieValue(request,"TT_CART",true);

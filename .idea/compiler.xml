@@ -8,11 +8,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="taotao-manager-web" />
         <module name="taotao-manager-mapper" />
-        <module name="taotao-rest" />
+        <module name="taotao-manager-pojo" />
         <module name="taotao-common" />
         <module name="taotao-order" />
         <module name="taotao-portal" />
-        <module name="taotao-manager-pojo" />
+        <module name="taotao-rest" />
         <module name="taotao-search" />
         <module name="taotao-sso" />
         <module name="taotao-manager-service" />

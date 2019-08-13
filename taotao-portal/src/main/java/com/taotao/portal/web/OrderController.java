@@ -26,14 +26,14 @@ public class OrderController {
     private OrderService orderService;
     @Autowired
     private CartService cartService;
-
+//订单展示
     @RequestMapping("/order-cart")
     public String toOrderCart(HttpServletRequest request, Model model){
         List<CartItem> cartItemList = cartService.getCartItemList(request);
         model.addAttribute("cartList",cartItemList);
         return "order-cart";
     }
-
+//提交订单
     @RequestMapping("/create")
     public String toCreateOrder(Order order, Model model,HttpServletRequest request){
         OrderResult orderResult = orderService.createOrder(order,request);

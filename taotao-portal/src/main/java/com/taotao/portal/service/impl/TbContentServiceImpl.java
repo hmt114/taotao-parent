@@ -20,7 +20,7 @@ public class TbContentServiceImpl implements TbContentService {
     @Override
     public String getContent() {
 
-        //发送请求到rest服务，接收数据
+        //发送请求到rest服务，接收数据，轮播图
         String content = HttpUtil.doGet(restUrl+"/content/getall");
         TaotaoResult taotaoResult = JsonUtils.jsonToPojo(content,TaotaoResult.class);
         if(taotaoResult.getStatus().equals(200)){

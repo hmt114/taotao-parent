@@ -1,5 +1,6 @@
 package com.taotao.portal.service;
 
+import com.taotao.common.TaotaoResult;
 import com.taotao.portal.pojo.CartItem;
 
 import javax.servlet.http.HttpServletRequest;
@@ -14,4 +15,8 @@ public interface CartService {
     List<CartItem> addItem(Long itemId, HttpServletRequest request, HttpServletResponse response);
 
     List<CartItem> getCartItemList(HttpServletRequest request);
+
+    TaotaoResult updateNum(Long itemId, Long num, HttpServletRequest request, HttpServletResponse response);
+
+    List<CartItem> deleteid(Long itemId, HttpServletRequest request, HttpServletResponse response);
 }
