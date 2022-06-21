@@ -30,7 +30,7 @@
         <mybatis.springboot.starter.version>2.1.0</mybatis.springboot.starter.version>
         <mybatis.pagehelper.springboot.version>1.2.10</mybatis.pagehelper.springboot.version>
 
-        <mysql.version.my>5.1.47</mysql.version.my>
+        <mysql.version.my>8.0.28</mysql.version.my>
 
         <slf4j.version>1.6.4</slf4j.version>
         <jackson.version>2.9.9</jackson.version>
